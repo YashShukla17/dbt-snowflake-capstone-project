@@ -8607,3 +8607,92 @@ parsing.
 [0m11:37:09.023240 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C4C1DFAD50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C4CA7E64B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C4C5017FB0>]}
 [0m11:37:09.023800 [debug] [MainThread]: Flushing usage events
 [0m11:37:11.182344 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:59:30.255912 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B602B32CF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B605303ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B605303C50>]}
+
+
+============================== 11:59:30.266703 | b58e766c-bc8c-44c2-a58f-4f717a5083c4 ==============================
+[0m11:59:30.266703 [info ] [MainThread]: Running with dbt=1.12.5
+[0m11:59:30.268129 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Yash Shukla\\.dbt', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt ', 'log_path': 'c:\\Users\\Yash Shukla\\Documents\\dbt_demo\\capston_project_dbt_snowflake\\logs'}
+[0m11:59:30.274687 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C6A8382CF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C6AAB63ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C6AAB63C50>]}
+
+
+============================== 11:59:30.282179 | 1fb140da-e1d8-4004-894e-18eb309444ad ==============================
+[0m11:59:30.282179 [info ] [MainThread]: Running with dbt=1.12.5
+[0m11:59:30.283135 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Yash Shukla\\.dbt', 'use_colors': 'True', 'hints_enabled': 'True', 'invocation_command': 'dbt ', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'c:\\Users\\Yash Shukla\\Documents\\dbt_demo\\capston_project_dbt_snowflake\\logs'}
+[0m11:59:30.522141 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b58e766c-bc8c-44c2-a58f-4f717a5083c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B603296650>]}
+[0m11:59:30.527475 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1fb140da-e1d8-4004-894e-18eb309444ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C6A8AF6650>]}
+[0m11:59:30.582716 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+[WinError 2] The system cannot find the file specified: 'dbt_packages\\codegen\\.github\\ISSUE_TEMPLATE\\bug_report.md'
+[0m11:59:30.589220 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\Yash Shukla\AppData\Local\Programs\Python\Python313\Lib\shutil.py", line 625, in _rmtree_unsafe
+    os.unlink(fullname)
+    ~~~~~~~~~^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'dbt_packages\\codegen\\.github\\ISSUE_TEMPLATE\\bug_report.md'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Yash Shukla\AppData\Local\Programs\Python\Python313\Lib\site-packages\dbt\cli\requires.py", line 198, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yash Shukla\AppData\Local\Programs\Python\Python313\Lib\site-packages\dbt\cli\requires.py", line 144, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Yash Shukla\AppData\Local\Programs\Python\Python313\Lib\site-packages\dbt\cli\requires.py", line 277, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Yash Shukla\AppData\Local\Programs\Python\Python313\Lib\site-packages\dbt\cli\requires.py", line 340, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Yash Shukla\AppData\Local\Programs\Python\Python313\Lib\site-packages\dbt\cli\main.py", line 481, in deps
+    results = task.run()
+  File "C:\Users\Yash Shukla\AppData\Local\Programs\Python\Python313\Lib\site-packages\dbt\task\deps.py", line 305, in run
+    system.rmtree(self.project.packages_install_path)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yash Shukla\AppData\Local\Programs\Python\Python313\Lib\site-packages\dbt_common\clients\system.py", line 730, in rmtree
+    return shutil.rmtree(path, onerror=chmod_and_retry)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yash Shukla\AppData\Local\Programs\Python\Python313\Lib\shutil.py", line 790, in rmtree
+    return _rmtree_unsafe(path, onexc)
+  File "C:\Users\Yash Shukla\AppData\Local\Programs\Python\Python313\Lib\shutil.py", line 629, in _rmtree_unsafe
+    onexc(os.unlink, fullname, err)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yash Shukla\AppData\Local\Programs\Python\Python313\Lib\shutil.py", line 754, in onexc
+    return onerror(func, path, exc_info)
+  File "C:\Users\Yash Shukla\AppData\Local\Programs\Python\Python313\Lib\site-packages\dbt_common\clients\system.py", line 674, in chmod_and_retry
+    os.chmod(path, stat.S_IREAD | stat.S_IWRITE)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'dbt_packages\\codegen\\.github\\ISSUE_TEMPLATE\\bug_report.md'
+
+[0m11:59:30.591444 [debug] [MainThread]: Command `cli deps` failed at 11:59:30.591032 after 0.68 seconds
+[0m11:59:30.592187 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B60533A7A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B6055D05A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B605179450>]}
+[0m11:59:30.592867 [debug] [MainThread]: Flushing usage events
+[0m11:59:31.357416 [debug] [MainThread]: Set downloads directory='C:\Users\YASHSH~1\AppData\Local\Temp\dbt-downloads-u7_80ir5'
+[0m11:59:31.358262 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m11:59:32.210335 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m11:59:32.213172 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m11:59:32.228160 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:59:32.965482 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m11:59:32.974951 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/codegen.json
+[0m11:59:33.889073 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/codegen.json 200
+[0m11:59:33.894844 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/metaplane/dbt_expectations.json
+[0m11:59:34.740474 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/metaplane/dbt_expectations.json 200
+[0m11:59:34.748883 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/godatadriven/dbt_date.json
+[0m11:59:35.523497 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/godatadriven/dbt_date.json 200
+[0m11:59:35.532003 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m11:59:37.582119 [info ] [MainThread]: Installed from version 1.4.1
+[0m11:59:37.583233 [info ] [MainThread]: Up to date!
+[0m11:59:37.584282 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '1fb140da-e1d8-4004-894e-18eb309444ad', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C6AAB99BF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C6AAB98E20>]}
+[0m11:59:37.585303 [info ] [MainThread]: Installing dbt-labs/codegen
+[0m11:59:39.067440 [info ] [MainThread]: Installed from version 0.14.1
+[0m11:59:39.068162 [info ] [MainThread]: Up to date!
+[0m11:59:39.068721 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '1fb140da-e1d8-4004-894e-18eb309444ad', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C6AA9DDC50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C6A90F9130>]}
+[0m11:59:39.069314 [info ] [MainThread]: Installing metaplane/dbt_expectations
+[0m11:59:41.318291 [info ] [MainThread]: Installed from version 0.10.10
+[0m11:59:41.319746 [info ] [MainThread]: Up to date!
+[0m11:59:41.321318 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '1fb140da-e1d8-4004-894e-18eb309444ad', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C6AACCB850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C6AAD6FE70>]}
+[0m11:59:41.322560 [info ] [MainThread]: Installing godatadriven/dbt_date
+[0m11:59:43.062752 [info ] [MainThread]: Installed from version 0.21.0
+[0m11:59:43.063642 [info ] [MainThread]: Up to date!
+[0m11:59:43.064419 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '1fb140da-e1d8-4004-894e-18eb309444ad', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C6AAE3C890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C6AAE3D0D0>]}
+[0m11:59:43.071988 [debug] [MainThread]: Command `cli deps` succeeded at 11:59:43.071617 after 13.14 seconds
+[0m11:59:43.072850 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C6AADCAA40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C6A8AB32F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C6AAE66350>]}
+[0m11:59:43.073651 [debug] [MainThread]: Flushing usage events
+[0m11:59:45.022558 [debug] [MainThread]: An error was encountered while trying to flush usage events
