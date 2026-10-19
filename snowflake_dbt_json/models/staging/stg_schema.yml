@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: stg_airports
+    description: ""
+    columns:
+      - name: city
+        data_type: varchar
+        description: ""
+
+      - name: airport_code
+        data_type: varchar
+        description: ""
+
+      - name: country
+        data_type: varchar
+        description: ""
+
+      - name: latitude
+        data_type: number
+        description: ""
+
+      - name: longitude
+        data_type: number
+        description: ""

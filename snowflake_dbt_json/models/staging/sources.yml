@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: raw
+    tables:
+      - name: airports_raw_dataset
+        description: this table stores data for top 30 busiest airports
+        loaded_at_field: inserted_date
+        freshness:
+          warn_after:
+            count: 12
+            period: day
+          error_after:
+            count: 24
+            period: day

@@ -1,0 +1,118 @@
+version: 2
+
+models:
+  - name: dimairports
+    description: ""
+    columns:
+      - name: id
+        data_type: varchar
+        description: ""
+
+      - name: airport_code
+        data_type: varchar
+        description: ""
+
+      - name: inserted_date
+        data_type: timestamp_ntz
+        description: ""
+
+      - name: inserted_by
+        data_type: varchar
+        description: ""
+
+  - name: dimcountry
+    description: ""
+    columns:
+      - name: id
+        data_type: varchar
+        description: ""
+
+      - name: country
+        data_type: varchar
+        description: ""
+
+      - name: inserted_date
+        data_type: timestamp_ltz
+        description: ""
+
+      - name: inserted_by
+        data_type: varchar
+        description: ""
+
+      - name: updated_date
+        data_type: varchar
+        description: ""
+
+      - name: updated_by
+        data_type: varchar
+        description: ""
+
+  - name: dimcity
+    description: ""
+    columns:
+      - name: id
+        data_type: varchar
+        description: ""
+
+      - name: city
+        data_type: varchar
+        description: ""
+
+      - name: isactive
+        data_type: boolean
+        description: ""
+
+      - name: inserted_date
+        data_type: timestamp_ltz
+        description: ""
+
+      - name: inserted_by
+        data_type: varchar
+        description: ""
+
+      - name: updated_date
+        data_type: varchar
+        description: ""
+
+      - name: updated_by
+        data_type: varchar
+        description: ""
+
+  - name: fact_airports
+    description: ""
+    columns:
+      - name: id
+        data_type: varchar
+        description: ""
+
+      - name: airport_code_id
+        data_type: varchar
+        description: ""
+
+      - name: city_id
+        data_type: varchar
+        description: ""
+
+      - name: country_id
+        data_type: varchar
+        description: ""
+
+      - name: longitude
+        data_type: number
+        description: ""
+
+      - name: latitude
+        data_type: number
+        description: ""
+
+      - name: airport_cordinates
+        data_type: geography
+        description: ""
+
+      - name: inserted_date
+        data_type: timestamp_ltz
+        description: ""
+
+      - name: inserted_by
+        data_type: varchar
+        description: ""
