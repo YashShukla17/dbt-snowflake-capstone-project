@@ -15883,3 +15883,19 @@ Finished 'compile' successfully for target 'dev' [2.4s]
 Processed: 7 models | 1 snapshot
 Summary: 8 total | 8 success
 06:05:05.354352 [info ]: Cached model count updated: 7 models (accurate)
+==================== 2026-10-19T16:51:32.527586Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-10-19T16:51:32.528063Z | 5c8743f4-0ed7-469f-b788-a45dafccc80d ====================
+16:51:32.528145 [info ]: Starting dbt LSP server
+16:51:32.528215 [info ]: Connecting to LSP client on port 8000
+16:51:32.532431 [info ]: Successfully connected to LSP client
+16:51:32.532478 [info ]: Creating LSP service...
+16:51:32.535483 [info ]: Creating LSP server...
+16:51:32.535515 [info ]: Starting LSP server...
+16:51:47.733167 [info ]: Loading ~/.dbt/profiles.yml
+17:05:00.382472 [debug]: Ignoring unsupported LSP notification
+17:05:29.333704 [debug]: Ignoring unsupported LSP notification
+17:05:29.915645 [debug]: Ignoring unsupported LSP notification
+17:05:31.624495 [debug]: Ignoring unsupported LSP notification
+17:05:52.903774 [debug]: Ignoring unsupported LSP notification
+17:07:53.958854 [debug]: Ignoring unsupported LSP notification
+17:07:54.375953 [debug]: Ignoring unsupported LSP notification
