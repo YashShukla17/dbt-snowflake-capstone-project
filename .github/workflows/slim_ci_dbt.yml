@@ -5,6 +5,11 @@ on:
     branches:
       - main
   workflow_dispatch:
+    inputs:
+      pr_number:  
+        description: "pr number for schema"
+        required: true
+        default: '999'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
