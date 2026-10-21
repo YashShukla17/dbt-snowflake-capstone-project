@@ -18293,3 +18293,46 @@ Finished 'compile' successfully for target 'dev' [1.6s]
 Processed: 7 models | 1 snapshot
 Summary: 8 total | 8 success
 16:56:51.542205 [info ]: Cached model count updated: 7 models (accurate)
+17:12:03.023716 [debug]: Ignoring unsupported LSP notification
+==================== 2026-10-21T17:12:14.914266Z | 2950e032-1169-4a84-a4cd-2cc79bf1af31 ====================
+17:12:14.914386 [info ]: Started loading project
+17:12:14.915590 [info ]: Loading ~/.dbt/profiles.yml
+17:12:14.916456 [info ]: Finished loading project [  0.00s]
+17:12:14.916586 [error]: [IoError (dbt1001)]: Profile 'capston_project_dbt_snowflake' not found in profiles.yml
+  --> dbt_project.yml:10:10
+17:12:14.916804 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [2ms]
+17:12:14.916915 [info ]: Cached model count updated: 7 models (accurate)
+==================== 2026-10-21T17:12:16.739369Z | c0fc571f-a680-4294-af83-b5d9b9cf6226 ====================
+17:12:16.739524 [info ]: Started loading project
+17:12:16.740919 [info ]: Loading ~/.dbt/profiles.yml
+17:12:16.741765 [info ]: Finished loading project [  0.00s]
+17:12:16.742094 [error]: [IoError (dbt1001)]: Profile 'capston_project_dbt_snowflake' not found in profiles.yml
+  --> dbt_project.yml:10:10
+17:12:16.742359 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [2ms]
+17:12:16.742451 [info ]: Cached model count updated: 7 models (accurate)
+17:15:29.719065 [debug]: Ignoring unsupported LSP notification
+17:40:37.794726 [info ]: Loading ~/.dbt/profiles.yml
+17:40:39.180152 [info ]: Loading ~/.dbt/profiles.yml
+17:51:04.067420 [info ]: Loading ~/.dbt/profiles.yml
+==================== 2026-10-21T17:51:05.901874Z | 8eac2686-816d-4ad8-861e-53145ccec825 ====================
+17:51:05.902059 [info ]: Started loading project
+17:51:05.902397 [info ]: Finished loading project [  0.00s]
+17:51:05.902879 [error]: [SerializationError (dbt1013)]: YAML error: mapping values are not allowed in this context at line 6 column 5
+  --> dbt_project.yml:6:5
+17:51:05.903106 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [1ms]
+17:51:05.903236 [info ]: Cached model count updated: 7 models (accurate)
+==================== 2026-10-21T17:51:07.631371Z | d86300a2-eef2-456a-9ef1-626596397015 ====================
+17:51:07.631535 [info ]: Started loading project
+17:51:07.631945 [info ]: Finished loading project [  0.00s]
+17:51:07.632506 [error]: [SerializationError (dbt1013)]: YAML error: mapping values are not allowed in this context at line 6 column 5
+  --> dbt_project.yml:6:5
+17:51:07.632739 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [1ms]
+17:51:07.632851 [info ]: Cached model count updated: 7 models (accurate)
