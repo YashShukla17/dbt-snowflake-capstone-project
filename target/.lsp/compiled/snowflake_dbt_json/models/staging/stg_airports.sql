@@ -2,7 +2,7 @@
 
 
 with source as (
-    select * from dbt_captsone.raw.airports_raw_dataset
+    select * from dbt_capstone.raw.airports_raw_dataset
 ), renamed as (
     select  s.value:city::varchar(20) as city,s.value:code::varchar(10) as airport_Code,
      s.value:country::varchar(20) as country,
