@@ -15899,3 +15899,359 @@ Summary: 8 total | 8 success
 17:05:52.903774 [debug]: Ignoring unsupported LSP notification
 17:07:53.958854 [debug]: Ignoring unsupported LSP notification
 17:07:54.375953 [debug]: Ignoring unsupported LSP notification
+==================== 2026-10-19T17:39:08.813685Z | 73442107-f45e-4f7c-aa23-966b53eab716 ====================
+17:39:08.814109 [info ]: Started loading project
+17:39:08.816007 [info ]: Loading ~/.dbt/profiles.yml
+17:39:08.833626 [info ]:    Started resolving packages from packages.yml
+17:39:09.317439 [info ]:     Failed [  0.48s] resolving packages from packages.yml (error: Operation cancelled)
+17:39:09.318141 [info ]: Finished loading project [  0.50s]
+17:39:09.318502 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully [504ms]
+==================== 2026-10-19T17:39:09.423517Z | 2dd26be3-5b57-4034-b26d-21e7425a5226 ====================
+17:39:09.423644 [info ]: Started loading project
+17:39:09.424752 [info ]: Loading ~/.dbt/profiles.yml
+17:39:09.434226 [info ]:    Started resolving packages from packages.yml
+17:39:09.668131 [info ]:   Finished [  0.23s] resolving packages from packages.yml (4 items)
+17:39:09.672253 [debug]:    Started loading packages
+17:39:09.731030 [debug]:     Loaded [  0.06s] packages
+17:39:09.733454 [info ]: Finished loading project [  0.31s]
+17:39:09.734657 [info ]: Started parsing
+17:39:09.890547 [debug]: Finished parsing models/marts/marts_schema.yml [  0.00s]
+17:39:09.891882 [debug]: Finished parsing models/staging/sources.yml [  0.00s]
+17:39:09.892433 [debug]: Finished parsing models/staging/stg_schema.yml [  0.00s]
+17:39:09.895352 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"loaded_at_field"`. YAML path: `loaded_at_field`.
+  --> models\staging\sources.yml:8:9
+17:39:09.896210 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"freshness"`. YAML path: `freshness`.
+  --> models\staging\sources.yml:9:9
+17:39:09.921529 [debug]: Finished parsing snapshots\airport_codes.sql [  0.02s]
+17:39:09.935955 [debug]: Finished parsing models/intermediate/airports_with_cordinates.sql [  0.01s]
+17:39:09.938137 [debug]: Finished parsing models/marts/dimairports.sql [  0.00s]
+17:39:09.940044 [debug]: Finished parsing models/marts/dimcity.sql [  0.00s]
+17:39:09.942156 [debug]: Finished parsing models/marts/dimcountry.sql [  0.00s]
+17:39:09.944283 [debug]: Finished parsing models/marts/fact_airports.sql [  0.00s]
+17:39:09.945341 [debug]: Finished parsing models/marts/get_airports_ordered_by_distance.sql [  0.00s]
+17:39:09.946506 [debug]: Finished parsing models/staging/stg_airports.sql [  0.00s]
+17:39:10.125925 [info ]: Loading ~/.dbt/profiles.yml
+17:39:10.530656 [info ]: Finished parsing [  0.80s]
+17:39:10.533252 [info ]: Cached model count updated: 7 models (estimate)
+17:39:10.533298 [info ]: Cached model count updated: 7 models (accurate)
+17:39:10.533521 [info ]: Started scheduling
+17:39:10.533748 [info ]: Finished scheduling [  0.00s]
+17:39:10.533787 [debug]: Compilation - 0 nodes selected: {}
+17:39:10.533861 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+17:39:10.533903 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+17:39:10.533940 [info ]: Started scheduling
+17:39:10.534122 [info ]: Finished scheduling [  0.00s]
+17:39:10.534559 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "DBT_CAPTSONE", schema: "RAW", table: "AIRPORTS_RAW_DATASET" }) and interval: None
+17:39:10.781735 [info ]: Started building task graph
+17:39:10.782009 [info ]: Finished building task graph [  0.00s]
+17:39:10.812936 [info ]: Started scheduling
+17:39:10.813055 [info ]: Finished scheduling [  0.00s]
+17:39:10.813491 [info ]: suggestion: Run 'dbt deps' to see the latest fusion compatible packages. For compatibility errors, try the autofix script: https://github.com/dbt-labs/dbt-autofix
+17:39:10.813491 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 2 warnings and 2 errors for target 'dev' [1.4s]
+17:39:10.813884 [info ]: Cached model count updated: 7 models (accurate)
+==================== 2026-10-19T17:39:12.623318Z | a569e2bc-58d4-4600-aec0-3bcdafc00e95 ====================
+17:39:12.623490 [info ]: Started loading project
+17:39:12.624860 [info ]: Loading ~/.dbt/profiles.yml
+17:39:12.644443 [info ]: Finished loading project [  0.02s]
+17:39:12.717327 [info ]: Cached model count updated: 7 models (estimate)
+17:39:12.717385 [info ]: Cached model count updated: 7 models (accurate)
+17:39:12.717461 [info ]: Started scheduling
+17:39:12.717710 [info ]: Finished scheduling [  0.00s]
+17:39:12.717754 [debug]: Compilation - 8 nodes selected: {"model.snowflake_dbt_json.airports_with_cordinates", "model.snowflake_dbt_json.dimairports", "model.snowflake_dbt_json.dimcity", "model.snowflake_dbt_json.dimcountry", "model.snowflake_dbt_json.fact_airports", "model.snowflake_dbt_json.get_airports_ordered_by_distance", "model.snowflake_dbt_json.stg_airports", "snapshot.snowflake_dbt_json.airport_codes"}
+17:39:12.721675 [debug]:    Started downloading relations (1 items)
+17:39:12.722436 [debug]: Snowflake driver resolved: snowflake 0.21.0.dev+dbt0.21.18
+17:39:15.054061 [debug]: create_debug_span(...).entered() took 85.1µs
+17:39:15.304301 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 249.9917ms
+17:39:15.304375 [debug]: reader.schema() took 5.3µs
+17:39:15.306859 [debug]: batch-consume loop (for res in reader) took 2.4506ms
+17:39:15.308659 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 254.5412ms
+17:39:15.308989 [debug]: concat_batches + normalize_result_column_names took 288.6µs
+17:39:15.309037 [debug]: record_current_span_status_from_attrs took 27.1µs
+17:39:15.309057 [debug]: Query executed on node unknown:
+SHOW OBJECTS IN SCHEMA "DBT_CAPTSONE"."RAW" LIMIT 10000
+17:39:15.309075 [debug]: drop(query_span_guard) (span exit/export) took 28.5µs
+17:39:15.309739 [debug]:   Finished [  2.59s] downloading relations (1 items)
+17:39:15.636968 [info ]: Started building task graph
+17:39:15.637322 [info ]: Finished building task graph [  0.00s]
+17:39:15.663706 [info ]: Started rendering (8 nodes)
+17:39:15.663802 [info ]: Started model raw.dimairports
+17:39:15.663846 [debug]: Started rendering model raw.dimairports
+17:39:15.663931 [info ]: Started snapshot raw.airport_codes
+17:39:15.663944 [debug]: Started rendering snapshot raw.airport_codes
+17:39:15.663967 [info ]: Started model raw.airports_with_cordinates
+17:39:15.663982 [debug]: Started rendering model raw.airports_with_cordinates
+17:39:15.663999 [info ]: Started model raw.stg_airports
+17:39:15.664008 [debug]: Started rendering model raw.stg_airports
+17:39:15.671775 [debug]: Compiled SQL for node model.snowflake_dbt_json.stg_airports at target\.lsp\compiled\snowflake_dbt_json\models\staging\stg_airports.sql
+17:39:15.675917 [debug]: Compiled SQL for node model.snowflake_dbt_json.airports_with_cordinates at target\.lsp\compiled\snowflake_dbt_json\models\intermediate\airports_with_cordinates.sql
+17:39:15.675736 [debug]: Finished rendering [  0.01s] model raw.stg_airports [success]
+17:39:15.676159 [info ]: Started analyzing (8 nodes)
+17:39:15.676180 [debug]: Started analyzing model raw.stg_airports
+17:39:15.677587 [debug]: Compiled SQL for node snapshot.snowflake_dbt_json.airport_codes at target\.lsp\compiled\snowflake_dbt_json\snapshots\airport_codes.sql\airport_codes.sql
+17:39:15.693378 [info ]: Started model raw.fact_airports
+17:39:15.693422 [debug]: Started rendering model raw.fact_airports
+17:39:15.693462 [debug]: Started analyzing model raw.airports_with_cordinates
+17:39:15.693488 [info ]: Started model raw.dimcity
+17:39:15.693501 [debug]: Started rendering model raw.dimcity
+17:39:15.693537 [info ]: Started model raw.get_airports_ordered_by_distance
+17:39:15.693548 [debug]: Started rendering model raw.get_airports_ordered_by_distance
+17:39:15.693584 [info ]: Started model raw.dimcountry
+17:39:15.693596 [debug]: Started rendering model raw.dimcountry
+17:39:15.693645 [debug]: Compiled SQL for node model.snowflake_dbt_json.dimairports at target\.lsp\compiled\snowflake_dbt_json\models\marts\dimairports.sql
+17:39:15.693872 [debug]: Finished rendering [  0.03s] model raw.airports_with_cordinates [success]
+17:39:15.693947 [debug]: Finished rendering [  0.03s] snapshot raw.airport_codes [success]
+17:39:15.694094 [debug]: Started analyzing snapshot raw.airport_codes
+17:39:15.694125 [debug]: Finished rendering [  0.03s] model raw.dimairports [success]
+17:39:15.694143 [debug]: Started analyzing model raw.dimairports
+17:39:15.724424 [debug]: Finished analyzing [  0.03s] model raw.airports_with_cordinates [success]
+17:39:15.724481 [info ]:  Succeeded model raw.airports_with_cordinates (ephemeral) [0.06s]
+17:39:15.728369 [debug]: Compiled SQL for node model.snowflake_dbt_json.fact_airports at target\.lsp\compiled\snowflake_dbt_json\models\marts\fact_airports.sql
+17:39:15.733766 [debug]: Compiled SQL for node model.snowflake_dbt_json.dimcity at target\.lsp\compiled\snowflake_dbt_json\models\marts\dimcity.sql
+17:39:15.736453 [debug]: Compiled SQL for node model.snowflake_dbt_json.get_airports_ordered_by_distance at target\.lsp\compiled\snowflake_dbt_json\models\marts\get_airports_ordered_by_distance.sql
+17:39:15.740403 [debug]: Finished rendering [  0.05s] model raw.fact_airports [success]
+17:39:15.740546 [debug]: Started analyzing model raw.fact_airports
+17:39:15.741139 [debug]: Finished rendering [  0.05s] model raw.dimcity [success]
+17:39:15.741183 [debug]: Started analyzing model raw.dimcity
+17:39:15.741405 [debug]: Compiled SQL for node model.snowflake_dbt_json.dimcountry at target\.lsp\compiled\snowflake_dbt_json\models\marts\dimcountry.sql
+17:39:15.753180 [debug]: Finished rendering [  0.06s] model raw.get_airports_ordered_by_distance [success]
+17:39:15.753255 [debug]: Started analyzing model raw.get_airports_ordered_by_distance
+17:39:15.766210 [debug]: Finished analyzing [  0.07s] snapshot raw.airport_codes [success]
+17:39:15.766284 [info ]:  Succeeded snapshot raw.airport_codes (snapshot) [2 of 7 in 0.10s]
+17:39:15.766383 [debug]: Finished rendering [  0.07s] model raw.dimcountry [success]
+17:39:15.766405 [info ]: Finished rendering [  0.10s] (8 nodes, 0 skipped, 0 errors)
+17:39:15.766442 [debug]: Started analyzing model raw.dimcountry
+17:39:15.769851 [debug]: Finished analyzing [  0.08s] model raw.dimairports [success]
+17:39:15.769904 [info ]:  Succeeded model raw.dimairports (table) [1 of 7 in 0.10s]
+17:39:15.769971 [debug]: Finished analyzing [  0.09s] model raw.stg_airports [success]
+17:39:15.769988 [info ]:  Succeeded model raw.stg_airports (table) [3 of 7 in 0.10s]
+17:39:15.771471 [debug]: Finished analyzing [  0.01s] model raw.dimcountry [success]
+17:39:15.771528 [info ]:  Succeeded model raw.dimcountry (table) [7 of 7 in 0.08s]
+17:39:15.779746 [debug]: Finished analyzing [  0.03s] model raw.get_airports_ordered_by_distance [success]
+17:39:15.779803 [info ]:  Succeeded model raw.get_airports_ordered_by_distance (view) [6 of 7 in 0.09s]
+17:39:15.794093 [debug]: Finished analyzing [  0.05s] model raw.dimcity [success]
+17:39:15.794153 [info ]:  Succeeded model raw.dimcity (incremental) [5 of 7 in 0.10s]
+17:39:15.798745 [debug]: Finished analyzing [  0.06s] model raw.fact_airports [success]
+17:39:15.798815 [info ]: Finished analyzing [  0.12s] (8 nodes, 0 skipped, 0 errors)
+17:39:15.798844 [info ]:  Succeeded model raw.fact_airports (incremental) [4 of 7 in 0.10s]
+17:39:15.812628 [info ]: Started scheduling
+17:39:15.812756 [info ]: Finished scheduling [  0.00s]
+17:39:15.813316 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [3.2s]
+Processed: 7 models | 1 snapshot
+Summary: 8 total | 8 success
+17:39:15.814742 [info ]: Cached model count updated: 7 models (accurate)
+==================== 2026-10-19T17:40:38.766456Z | 684e3295-ec4a-4dc6-bf4e-546d640ed0bb ====================
+17:40:38.766754 [info ]: Started loading project
+17:40:38.769382 [info ]: Loading ~/.dbt/profiles.yml
+17:40:38.792165 [info ]: Finished loading project [  0.03s]
+17:40:39.038399 [info ]: Cached model count updated: 7 models (estimate)
+17:40:39.038454 [info ]: Cached model count updated: 7 models (accurate)
+17:40:39.038565 [info ]: Started scheduling
+17:40:39.038795 [info ]: Finished scheduling [  0.00s]
+17:40:39.038836 [debug]: Compilation - 0 nodes selected: {}
+17:40:39.038902 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:snowflake_dbt_json.raw.airports_raw_dataset' does not match any enabled nodes
+17:40:39.038939 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+17:40:39.360380 [info ]: Started building task graph
+17:40:39.360468 [info ]: Finished building task graph [  0.00s]
+17:40:39.396757 [info ]: Started scheduling
+17:40:39.396902 [info ]: Finished scheduling [  0.00s]
+17:40:39.397470 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 2 warnings for target 'dev' [631ms]
+17:40:39.398919 [info ]: Cached model count updated: 7 models (accurate)
+17:40:41.451573 [debug]: Ignoring unsupported LSP notification
+==================== 2026-10-19T17:40:41.631889Z | cdfbe775-287d-49a7-8dcd-2695297dada9 ====================
+17:40:41.632115 [info ]: Started loading project
+17:40:41.634476 [info ]: Loading ~/.dbt/profiles.yml
+17:40:41.662732 [info ]: Started parsing
+17:40:41.850384 [info ]: Finished loading project [  0.22s]
+17:40:41.862135 [debug]: Finished parsing models/staging/sources.yml [  0.00s]
+17:40:41.862663 [debug]: Finished parsing models/staging/stg_schema.yml [  0.00s]
+17:40:41.864905 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"loaded_at_field"`. YAML path: `loaded_at_field`.
+  --> models\staging\sources.yml:8:9
+17:40:41.865493 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"freshness"`. YAML path: `freshness`.
+  --> models\staging\sources.yml:9:9
+17:40:41.872293 [debug]: Finished parsing snapshots\airport_codes.sql [  0.00s]
+17:40:41.875433 [debug]: Finished parsing models/staging/stg_airports.sql [  0.00s]
+17:40:42.343834 [info ]: Finished parsing [  0.68s]
+17:40:42.348808 [info ]: Cached model count updated: 7 models (estimate)
+17:40:42.348847 [info ]: Cached model count updated: 7 models (accurate)
+17:40:42.348931 [info ]: Started scheduling
+17:40:42.349094 [info ]: Finished scheduling [  0.00s]
+17:40:42.349128 [debug]: Compilation - 1 nodes selected: {"model.snowflake_dbt_json.stg_airports"}
+17:40:42.674922 [info ]: Started building task graph
+17:40:42.675014 [info ]: Finished building task graph [  0.00s]
+17:40:42.689873 [info ]: Started rendering (1 nodes)
+17:40:42.689932 [info ]: Started model raw.stg_airports
+17:40:42.689951 [debug]: Started rendering model raw.stg_airports
+17:40:42.692842 [debug]: Compiled SQL for node model.snowflake_dbt_json.stg_airports at target\.lsp\compiled\snowflake_dbt_json\models\staging\stg_airports.sql
+17:40:42.693078 [debug]: Finished rendering [  0.00s] model raw.stg_airports [success]
+17:40:42.693115 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+17:40:42.693145 [info ]: Started analyzing (1 nodes)
+17:40:42.693158 [debug]: Started analyzing model raw.stg_airports
+17:40:42.694224 [debug]: Finished analyzing [  0.00s] model raw.stg_airports [success]
+17:40:42.694250 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+17:40:42.694261 [info ]:  Succeeded model raw.stg_airports (table) [1 of 1 in 0.00s]
+17:40:42.703558 [info ]: Started scheduling
+17:40:42.703767 [info ]: Finished scheduling [  0.00s]
+17:40:42.705870 [info ]: suggestion: Run 'dbt deps' to see the latest fusion compatible packages. For compatibility errors, try the autofix script: https://github.com/dbt-labs/dbt-autofix
+17:40:42.705870 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 2 errors for target 'dev' [1.1s]
+Processed: 1 model
+Summary: 1 total | 1 success
+17:40:42.706012 [info ]: Cached model count updated: 7 models (accurate)
+==================== 2026-10-19T17:40:42.803719Z | bdc44f9d-eba9-422f-836d-c54ffe4c5772 ====================
+17:40:42.803866 [info ]: Started loading project
+17:40:42.805123 [info ]: Loading ~/.dbt/profiles.yml
+17:40:42.820010 [info ]: Finished loading project [  0.02s]
+17:40:42.882357 [info ]: Cached model count updated: 7 models (estimate)
+17:40:42.882393 [info ]: Cached model count updated: 7 models (accurate)
+17:40:42.882446 [info ]: Started scheduling
+17:40:42.882530 [info ]: Finished scheduling [  0.00s]
+17:40:42.882550 [debug]: Compilation - 0 nodes selected: {}
+17:40:42.882587 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:snowflake_dbt_json.raw.airports_raw_dataset' does not match any enabled nodes
+17:40:42.882611 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+17:40:43.174943 [info ]: Started building task graph
+17:40:43.174993 [info ]: Finished building task graph [  0.00s]
+17:40:43.201872 [info ]: Started scheduling
+17:40:43.201957 [info ]: Finished scheduling [  0.00s]
+17:40:43.202308 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 2 warnings for target 'dev' [398ms]
+17:40:43.202388 [info ]: Cached model count updated: 7 models (accurate)
+17:40:43.203205 [debug]: Ignoring unsupported LSP notification
+==================== 2026-10-19T17:40:43.352658Z | 320e66f8-549d-4707-a3cb-c84d5a0eea53 ====================
+17:40:43.352825 [info ]: Started loading project
+17:40:43.354171 [info ]: Loading ~/.dbt/profiles.yml
+17:40:43.377293 [info ]: Finished loading project [  0.02s]
+17:40:43.466274 [info ]: Cached model count updated: 7 models (estimate)
+17:40:43.466313 [info ]: Cached model count updated: 7 models (accurate)
+17:40:43.466391 [info ]: Started scheduling
+17:40:43.466498 [info ]: Finished scheduling [  0.00s]
+17:40:43.466542 [debug]: Compilation - 0 nodes selected: {}
+17:40:43.466584 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:snowflake_dbt_json.raw.airports_raw_dataset' does not match any enabled nodes
+17:40:43.466617 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+17:40:43.745390 [info ]: Started building task graph
+17:40:43.745443 [info ]: Finished building task graph [  0.00s]
+17:40:43.777300 [info ]: Started scheduling
+17:40:43.777400 [info ]: Finished scheduling [  0.00s]
+17:40:43.777799 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 2 warnings for target 'dev' [425ms]
+17:40:43.777926 [info ]: Cached model count updated: 7 models (accurate)
+==================== 2026-10-19T17:40:44.840944Z | 69fc5c7a-e777-4b49-b2f9-c050537fd395 ====================
+17:40:44.841083 [info ]: Started loading project
+17:40:44.842278 [info ]: Loading ~/.dbt/profiles.yml
+17:40:44.856538 [info ]: Finished loading project [  0.02s]
+17:40:44.926802 [info ]: Cached model count updated: 7 models (estimate)
+17:40:44.926843 [info ]: Cached model count updated: 7 models (accurate)
+17:40:44.926898 [info ]: Started scheduling
+17:40:44.926988 [info ]: Finished scheduling [  0.00s]
+17:40:44.927017 [debug]: Compilation - 0 nodes selected: {}
+17:40:44.927049 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '+source:snowflake_dbt_json.raw.airports_raw_dataset' does not match any enabled nodes
+17:40:44.927091 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+17:40:45.232559 [info ]: Started building task graph
+17:40:45.232607 [info ]: Finished building task graph [  0.00s]
+17:40:45.265905 [info ]: Started scheduling
+17:40:45.265989 [info ]: Finished scheduling [  0.00s]
+17:40:45.266323 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 2 warnings for target 'dev' [425ms]
+17:40:45.267013 [info ]: Cached model count updated: 7 models (accurate)
+==================== 2026-10-19T17:40:46.975801Z | 9730b737-0f70-4c0e-b0f6-8e52f1c5bb1b ====================
+17:40:46.975953 [info ]: Started loading project
+17:40:46.977147 [info ]: Loading ~/.dbt/profiles.yml
+17:40:46.991522 [info ]: Finished loading project [  0.02s]
+17:40:47.085578 [info ]: Cached model count updated: 7 models (estimate)
+17:40:47.085638 [info ]: Cached model count updated: 7 models (accurate)
+17:40:47.085728 [info ]: Started scheduling
+17:40:47.085981 [info ]: Finished scheduling [  0.00s]
+17:40:47.086036 [debug]: Compilation - 8 nodes selected: {"model.snowflake_dbt_json.airports_with_cordinates", "model.snowflake_dbt_json.dimairports", "model.snowflake_dbt_json.dimcity", "model.snowflake_dbt_json.dimcountry", "model.snowflake_dbt_json.fact_airports", "model.snowflake_dbt_json.get_airports_ordered_by_distance", "model.snowflake_dbt_json.stg_airports", "snapshot.snowflake_dbt_json.airport_codes"}
+17:40:47.090356 [debug]:    Started downloading relations (1 items)
+17:40:48.094345 [debug]: create_debug_span(...).entered() took 76.6µs
+17:40:48.467920 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 373.4189ms
+17:40:48.467970 [debug]: reader.schema() took 1.2µs
+17:40:48.473869 [debug]: batch-consume loop (for res in reader) took 5.8271ms
+17:40:48.476956 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 382.4888ms
+17:40:48.477123 [debug]: concat_batches + normalize_result_column_names took 106.1µs
+17:40:48.477154 [debug]: record_current_span_status_from_attrs took 14.1µs
+17:40:48.477181 [debug]: Query executed on node unknown:
+SHOW OBJECTS IN SCHEMA "DBT_CAPTSONE"."RAW" LIMIT 10000
+17:40:48.477202 [debug]: drop(query_span_guard) (span exit/export) took 31µs
+17:40:48.477824 [debug]:   Finished [  1.39s] downloading relations (1 items)
+17:40:48.776647 [info ]: Started building task graph
+17:40:48.776840 [info ]: Finished building task graph [  0.00s]
+17:40:48.805520 [info ]: Started rendering (8 nodes)
+17:40:48.805602 [info ]: Started model raw.dimairports
+17:40:48.805625 [debug]: Started rendering model raw.dimairports
+17:40:48.805686 [info ]: Started snapshot raw.airport_codes
+17:40:48.805704 [debug]: Started rendering snapshot raw.airport_codes
+17:40:48.805727 [info ]: Started model raw.airports_with_cordinates
+17:40:48.805740 [debug]: Started rendering model raw.airports_with_cordinates
+17:40:48.805764 [info ]: Started model raw.stg_airports
+17:40:48.805777 [debug]: Started rendering model raw.stg_airports
+17:40:48.806872 [debug]: Compiled SQL for node model.snowflake_dbt_json.dimairports at target\.lsp\compiled\snowflake_dbt_json\models\marts\dimairports.sql
+17:40:48.807100 [debug]: Compiled SQL for node snapshot.snowflake_dbt_json.airport_codes at target\.lsp\compiled\snowflake_dbt_json\snapshots\airport_codes.sql\airport_codes.sql
+17:40:48.807443 [debug]: Compiled SQL for node model.snowflake_dbt_json.airports_with_cordinates at target\.lsp\compiled\snowflake_dbt_json\models\intermediate\airports_with_cordinates.sql
+17:40:48.808181 [debug]: Finished rendering [  0.00s] model raw.dimairports [success]
+17:40:48.808772 [info ]: Started analyzing (8 nodes)
+17:40:48.808800 [debug]: Started analyzing model raw.dimairports
+17:40:48.809816 [debug]: Compiled SQL for node model.snowflake_dbt_json.stg_airports at target\.lsp\compiled\snowflake_dbt_json\models\staging\stg_airports.sql
+17:40:48.809941 [debug]: Finished rendering [  0.00s] snapshot raw.airport_codes [success]
+17:40:48.810025 [debug]: Started analyzing snapshot raw.airport_codes
+17:40:48.810400 [debug]: Finished analyzing [  0.00s] model raw.dimairports [success]
+17:40:48.810439 [info ]:  Succeeded model raw.dimairports (table) [1 of 7 in 0.00s]
+17:40:48.810641 [debug]: Finished rendering [  0.00s] model raw.airports_with_cordinates [success]
+17:40:48.810680 [info ]: Started model raw.dimcity
+17:40:48.810700 [debug]: Started rendering model raw.dimcity
+17:40:48.810725 [debug]: Started analyzing model raw.airports_with_cordinates
+17:40:48.810751 [info ]: Started model raw.get_airports_ordered_by_distance
+17:40:48.810765 [debug]: Started rendering model raw.get_airports_ordered_by_distance
+17:40:48.810788 [info ]: Started model raw.fact_airports
+17:40:48.810801 [debug]: Started rendering model raw.fact_airports
+17:40:48.810821 [info ]: Started model raw.dimcountry
+17:40:48.810834 [debug]: Started rendering model raw.dimcountry
+17:40:48.810858 [debug]: Finished analyzing [  0.00s] snapshot raw.airport_codes [success]
+17:40:48.810875 [info ]:  Succeeded snapshot raw.airport_codes (snapshot) [2 of 7 in 0.00s]
+17:40:48.810909 [debug]: Finished rendering [  0.01s] model raw.stg_airports [success]
+17:40:48.810924 [debug]: Started analyzing model raw.stg_airports
+17:40:48.811310 [debug]: Finished analyzing [  0.00s] model raw.airports_with_cordinates [success]
+17:40:48.811354 [info ]:  Succeeded model raw.airports_with_cordinates (ephemeral) [0.00s]
+17:40:48.812205 [debug]: Finished analyzing [  0.00s] model raw.stg_airports [success]
+17:40:48.812231 [info ]:  Succeeded model raw.stg_airports (table) [3 of 7 in 0.01s]
+17:40:48.813254 [debug]: Compiled SQL for node model.snowflake_dbt_json.dimcity at target\.lsp\compiled\snowflake_dbt_json\models\marts\dimcity.sql
+17:40:48.813296 [debug]: Compiled SQL for node model.snowflake_dbt_json.fact_airports at target\.lsp\compiled\snowflake_dbt_json\models\marts\fact_airports.sql
+17:40:48.813557 [debug]: Compiled SQL for node model.snowflake_dbt_json.get_airports_ordered_by_distance at target\.lsp\compiled\snowflake_dbt_json\models\marts\get_airports_ordered_by_distance.sql
+17:40:48.813821 [debug]: Finished rendering [  0.00s] model raw.dimcity [success]
+17:40:48.814061 [debug]: Compiled SQL for node model.snowflake_dbt_json.dimcountry at target\.lsp\compiled\snowflake_dbt_json\models\marts\dimcountry.sql
+17:40:48.814657 [debug]: Started analyzing model raw.dimcity
+17:40:48.815212 [debug]: Finished rendering [  0.00s] model raw.fact_airports [success]
+17:40:48.815556 [debug]: Started analyzing model raw.fact_airports
+17:40:48.816837 [debug]: Finished analyzing [  0.00s] model raw.dimcity [success]
+17:40:48.816873 [info ]:  Succeeded model raw.dimcity (incremental) [4 of 7 in 0.01s]
+17:40:48.817169 [debug]: Finished rendering [  0.01s] model raw.get_airports_ordered_by_distance [success]
+17:40:48.817207 [debug]: Started analyzing model raw.get_airports_ordered_by_distance
+17:40:48.818560 [debug]: Finished analyzing [  0.00s] model raw.get_airports_ordered_by_distance [success]
+17:40:48.818781 [info ]:  Succeeded model raw.get_airports_ordered_by_distance (view) [5 of 7 in 0.01s]
+17:40:48.818847 [debug]: Finished rendering [  0.01s] model raw.dimcountry [success]
+17:40:48.818863 [info ]: Finished rendering [  0.01s] (8 nodes, 0 skipped, 0 errors)
+17:40:48.818886 [debug]: Started analyzing model raw.dimcountry
+17:40:48.819559 [debug]: Finished analyzing [  0.00s] model raw.dimcountry [success]
+17:40:48.819589 [info ]:  Succeeded model raw.dimcountry (table) [7 of 7 in 0.01s]
+17:40:48.821249 [debug]: Finished analyzing [  0.01s] model raw.fact_airports [success]
+17:40:48.821286 [info ]: Finished analyzing [  0.01s] (8 nodes, 0 skipped, 0 errors)
+17:40:48.821301 [info ]:  Succeeded model raw.fact_airports (incremental) [6 of 7 in 0.01s]
+17:40:48.837404 [info ]: Started scheduling
+17:40:48.837531 [info ]: Finished scheduling [  0.00s]
+17:40:48.837998 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [1.9s]
+Processed: 7 models | 1 snapshot
+Summary: 8 total | 8 success
+17:40:48.840478 [info ]: Cached model count updated: 7 models (accurate)

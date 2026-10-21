@@ -7,10 +7,14 @@ models:
       - name: city
         data_type: varchar
         description: ""
+        tests:
+          - not_null 
 
       - name: airport_code
         data_type: varchar
         description: ""
+        data_tests:
+          - not_null
 
       - name: country
         data_type: varchar
@@ -19,7 +23,13 @@ models:
       - name: latitude
         data_type: number
         description: ""
+        data_tests:
+          - dbt_utils.expression_is_true:
+              arguments:  "latitude between -90 and 90"
 
       - name: longitude
         data_type: number
         description: ""
+        tests:
+          - dbt_utils.expression_is_true:
+              arguments: "longitude bewteen -180 and 180"
