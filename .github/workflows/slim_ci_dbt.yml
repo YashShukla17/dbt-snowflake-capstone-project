@@ -56,4 +56,4 @@ jobs:
 
       - name: clean up pr branch after complition of workflow
         if: always()
-        run: dbt run-operation drop_pr_schema --args '{schema_name: ${{ env.DBT_SCHEMA }}}'
+        run: dbt run-operation drop_schema --args '{schema_name: ${{ env.DBT_SCHEMA }}}'
