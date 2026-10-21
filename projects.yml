@@ -3,7 +3,7 @@ snowflake_dbt_json:
   outputs:
     dev:
       type: snowflake
-      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}" # Or hardcode your account ID like 'xy12345.us-east-1'
+      account: 'PIRRXSV-VE11580'
       user: "{{ env_var('DBT_USER') }}"
       password: "{{ env_var('DBT_PASSWORD') }}"
       role: SYSADMIN # Or whatever role you use
