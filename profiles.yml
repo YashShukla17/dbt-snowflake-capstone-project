@@ -6,7 +6,7 @@ snowflake_dbt_json:
       account: 'PIRRXSV-VE11580'
       user: "{{ env_var('DBT_USER') }}"
       password: "{{ env_var('DBT_PASSWORD') }}"
-      role: ACCOUNTADMIN # Or whatever role you use
-      database: dbt_captsone
-      warehouse: COMPUTE_WH
+      role: 'ACCOUNTADMIN' # Or whatever role you use
+      database: 'dbt_captsone'
+      warehouse: 'COMPUTE_WH'
       schema: "{{ env_var('DBT_SCHEMA') }}"
