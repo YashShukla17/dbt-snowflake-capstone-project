@@ -11370,3 +11370,238 @@ parsing.
 [0m21:23:40.388943 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB85A17610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB86FEF4A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DB8540E8D0>]}
 [0m21:23:40.389474 [debug] [MainThread]: Flushing usage events
 [0m21:23:42.003725 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:26:00.092891 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159A26A9400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159A4DDBED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159A4DDB750>]}
+
+
+============================== 22:26:00.103337 | d22460b1-74ee-4d0d-8eee-7efcd88dd541 ==============================
+[0m22:26:00.103337 [info ] [MainThread]: Running with dbt=1.12.0
+[0m22:26:00.104685 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Yash Shukla\\.dbt', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt run-operation drop_schema --args {schema_name: pr}', 'log_path': 'C:\\Users\\Yash Shukla\\Documents\\dbt_demo\\capston_project_dbt_snowflake\\logs'}
+[0m22:26:01.808917 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m22:26:01.809848 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m22:26:01.810479 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m22:26:09.046630 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd22460b1-74ee-4d0d-8eee-7efcd88dd541', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159A2D99BA0>]}
+[0m22:26:09.199847 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd22460b1-74ee-4d0d-8eee-7efcd88dd541', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159A66FEF10>]}
+[0m22:26:09.206188 [info ] [MainThread]: Registered adapter: snowflake=1.12.1
+[0m22:26:10.053536 [debug] [MainThread]: checksum: acb9a59fa4d929555e0799ed20f9fb76b9234b7ef17f11374f68a90cde02b482, vars: {}, profile: snowflake_dbt_json, target: dev, version: 1.12.0
+[0m22:26:10.318267 [info ] [MainThread]: Unable to do partial parsing because of a version mismatch
+[0m22:26:10.319287 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'd22460b1-74ee-4d0d-8eee-7efcd88dd541', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159A7075C50>]}
+[0m22:26:10.369270 [warn ] [MainThread]: [[33mWARNING[0m][PropertyMovedToConfigDeprecation]: Deprecated functionality
+Found `freshness` as a top-level property of `sources[0].tables[0]` in file
+`models\staging\sources.yml`. The `freshness` top-level property should be moved
+into the `config` of `sources[0].tables[0]`.
+[0m22:26:10.371000 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'd22460b1-74ee-4d0d-8eee-7efcd88dd541', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159A62FB890>]}
+[0m22:26:16.106751 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd22460b1-74ee-4d0d-8eee-7efcd88dd541', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159A6E32890>]}
+[0m22:26:16.358284 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Yash Shukla\Documents\dbt_demo\capston_project_dbt_snowflake\target\manifest.json
+[0m22:26:16.398628 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Yash Shukla\Documents\dbt_demo\capston_project_dbt_snowflake\target\semantic_manifest.json
+[0m22:26:16.478288 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\Yash Shukla\Documents\dbt_demo\capston_project_dbt_snowflake\target\osi_document.json
+[0m22:26:16.540335 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd22460b1-74ee-4d0d-8eee-7efcd88dd541', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159A846BD40>]}
+[0m22:26:16.541103 [info ] [MainThread]: Found 7 models, 1 snapshot, 7 data tests, 1 source, 1029 macros
+[0m22:26:16.542120 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd22460b1-74ee-4d0d-8eee-7efcd88dd541', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159A845A090>]}
+[0m22:26:16.543042 [debug] [MainThread]: Acquiring new snowflake connection 'macro_drop_schema'
+[0m22:26:16.548450 [info ] [MainThread]: dropping the schema:- pr
+[0m22:26:16.567675 [debug] [MainThread]: Using snowflake connection "macro_drop_schema"
+[0m22:26:16.568659 [debug] [MainThread]: On macro_drop_schema: drop schema if exists .pr CASCADE
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "snowflake_dbt_json", "target_name": "dev", "connection_name": "macro_drop_schema"} */;
+[0m22:26:16.569314 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:26:17.782336 [debug] [MainThread]: Snowflake adapter: Snowflake query id: 01c7e1d8-3203-ac69-0018-7afe001bd17e
+[0m22:26:17.783144 [debug] [MainThread]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 1 at position 22 unexpected '.'.
+[0m22:26:17.783859 [debug] [MainThread]: Snowflake adapter: Error running SQL: macro drop_schema
+[0m22:26:17.784349 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m22:26:17.785157 [error] [MainThread]: [[31mERROR[0m]: Encountered an error while running operation: Database Error
+  001003 (42000): SQL compilation error:
+  syntax error line 1 at position 22 unexpected '.'.
+[0m22:26:17.797273 [debug] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\dbt\adapters\snowflake\connections.py", line 393, in exception_handler
+    yield
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\dbt\adapters\sql\connections.py", line 148, in add_query
+    _execute_query_with_retry(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor=cursor,
+        ^^^^^^^^^^^^^^
+    ...<4 lines>...
+        attempt=1,
+        ^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\dbt\adapters\sql\connections.py", line 97, in _execute_query_with_retry
+    cursor.execute(sql, bindings)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\snowflake\connector\cursor.py", line 1155, in execute
+    Error.errorhandler_wrapper(self.connection, self, error_class, errvalue)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\snowflake\connector\errors.py", line 298, in errorhandler_wrapper
+    handed_over = Error.hand_to_other_handler(
+        connection,
+    ...<2 lines>...
+        error_value,
+    )
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\snowflake\connector\errors.py", line 354, in hand_to_other_handler
+    cursor.errorhandler(connection, cursor, error_class, error_value)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\snowflake\connector\errors.py", line 229, in default_errorhandler
+    raise error_class(
+    ...<10 lines>...
+    )
+snowflake.connector.errors.ProgrammingError: 001003 (42000): SQL compilation error:
+syntax error line 1 at position 22 unexpected '.'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\dbt\task\run_operation.py", line 141, in run
+    self._run_unsafe(package_name, operation_name)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\dbt\task\run_operation.py", line 50, in _run_unsafe
+    res = adapter.execute_macro(
+        macro_name, project=package_name, kwargs=macro_kwargs, macro_resolver=self.manifest
+    )
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\dbt\adapters\base\impl.py", line 1372, in execute_macro
+    result = macro_function(**kwargs)
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\dbt_common\clients\jinja.py", line 427, in __call__
+    return self.call_macro(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\dbt_common\clients\jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\jinja2\runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 45, in macro
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\jinja2\sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\jinja2\runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\dbt\clients\jinja.py", line 83, in __call__
+    return self.call_macro(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\dbt_common\clients\jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\jinja2\runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 33, in macro
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\jinja2\sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\jinja2\runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\dbt\clients\jinja.py", line 83, in __call__
+    return self.call_macro(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\dbt_common\clients\jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\jinja2\runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 52, in macro
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\jinja2\sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\jinja2\runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\dbt_common\record.py", line 538, in record_replay_wrapper
+    return func_to_record(*call_args, **kwargs)
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\dbt\adapters\base\impl.py", line 523, in execute
+    return self.connections.execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\dbt\adapters\snowflake\connections.py", line 618, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+                ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\dbt\adapters\snowflake\connections.py", line 655, in add_query
+    connection, cursor = self._add_standard_queries(
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        stripped_queries,
+        ^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        abridge_sql_log=abridge_sql_log,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\dbt\adapters\snowflake\connections.py", line 714, in _add_standard_queries
+    connection, cursor = self.add_standard_query(query, **kwargs)
+                         ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\dbt\adapters\snowflake\connections.py", line 629, in add_standard_query
+    return super().add_query(self._add_query_comment(sql), **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\dbt\adapters\sql\connections.py", line 131, in add_query
+    with self.exception_handler(sql):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Yash Shukla\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Yash Shukla\documents\dbt_demo\venv\Lib\site-packages\dbt\adapters\snowflake\connections.py", line 419, in exception_handler
+    raise DbtDatabaseError(msg)
+dbt_common.exceptions.base.DbtDatabaseError: Database Error
+  001003 (42000): SQL compilation error:
+  syntax error line 1 at position 22 unexpected '.'.
+
+[0m22:26:17.811989 [debug] [MainThread]: Wrote artifact RunResultsArtifact to C:\Users\Yash Shukla\Documents\dbt_demo\capston_project_dbt_snowflake\target\run_results.json
+[0m22:26:17.813618 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- PropertyMovedToConfigDeprecation: 2 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m22:26:17.816531 [debug] [MainThread]: Command `dbt run-operation` failed at 22:26:17.815835 after 18.10 seconds
+[0m22:26:17.817367 [debug] [MainThread]: Connection 'macro_drop_schema' was left open.
+[0m22:26:17.818055 [debug] [MainThread]: On macro_drop_schema: Close
+[0m22:26:18.009635 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159A842E830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159A6B4A990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000159A6B4B070>]}
+[0m22:26:18.010368 [debug] [MainThread]: Flushing usage events
+[0m22:26:19.924360 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:26:56.235845 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6DE1F9400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6E092BED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6E092B750>]}
+
+
+============================== 22:26:56.246010 | d2d0b583-480d-47d7-a205-5c95bea284f8 ==============================
+[0m22:26:56.246010 [info ] [MainThread]: Running with dbt=1.12.0
+[0m22:26:56.247385 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Yash Shukla\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt run-operation drop_schema --args {schema_name: pr}', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\Users\\Yash Shukla\\Documents\\dbt_demo\\capston_project_dbt_snowflake\\logs'}
+[0m22:26:58.531453 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m22:26:58.533063 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m22:26:58.534292 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m22:26:59.520110 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd2d0b583-480d-47d7-a205-5c95bea284f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6DE8EDBA0>]}
+[0m22:26:59.732308 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd2d0b583-480d-47d7-a205-5c95bea284f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6E22E2F10>]}
+[0m22:26:59.738447 [info ] [MainThread]: Registered adapter: snowflake=1.12.1
+[0m22:27:01.289507 [debug] [MainThread]: checksum: acb9a59fa4d929555e0799ed20f9fb76b9234b7ef17f11374f68a90cde02b482, vars: {}, profile: snowflake_dbt_json, target: dev, version: 1.12.0
+[0m22:27:01.745753 [info ] [MainThread]: Unable to do partial parsing because of a version mismatch
+[0m22:27:01.748037 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'd2d0b583-480d-47d7-a205-5c95bea284f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6E2C49B50>]}
+[0m22:27:01.808958 [warn ] [MainThread]: [[33mWARNING[0m][PropertyMovedToConfigDeprecation]: Deprecated functionality
+Found `freshness` as a top-level property of `sources[0].tables[0]` in file
+`models\staging\sources.yml`. The `freshness` top-level property should be moved
+into the `config` of `sources[0].tables[0]`.
+[0m22:27:01.810669 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'd2d0b583-480d-47d7-a205-5c95bea284f8', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6E1EDB980>]}
+[0m22:27:11.008244 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd2d0b583-480d-47d7-a205-5c95bea284f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6E2A02890>]}
+[0m22:27:11.464904 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Yash Shukla\Documents\dbt_demo\capston_project_dbt_snowflake\target\manifest.json
+[0m22:27:11.477851 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Yash Shukla\Documents\dbt_demo\capston_project_dbt_snowflake\target\semantic_manifest.json
+[0m22:27:11.630208 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\Yash Shukla\Documents\dbt_demo\capston_project_dbt_snowflake\target\osi_document.json
+[0m22:27:11.749225 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd2d0b583-480d-47d7-a205-5c95bea284f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6E4013D40>]}
+[0m22:27:11.751080 [info ] [MainThread]: Found 7 models, 1 snapshot, 7 data tests, 1 source, 1029 macros
+[0m22:27:11.752931 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd2d0b583-480d-47d7-a205-5c95bea284f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6E3FFE090>]}
+[0m22:27:11.754532 [debug] [MainThread]: Acquiring new snowflake connection 'macro_drop_schema'
+[0m22:27:11.764313 [info ] [MainThread]: dropping the schema:- pr
+[0m22:27:11.805640 [debug] [MainThread]: Using snowflake connection "macro_drop_schema"
+[0m22:27:11.806998 [debug] [MainThread]: On macro_drop_schema: drop schema if exists dbt_captsone.pr CASCADE
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "snowflake_dbt_json", "target_name": "dev", "connection_name": "macro_drop_schema"} */;
+[0m22:27:11.808051 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:27:12.885287 [debug] [MainThread]: SQL status: SUCCESS 1 in 1.077 seconds
+[0m22:27:12.888916 [info ] [MainThread]: execution completed, dropped schema:- pr
+[0m22:27:12.921276 [debug] [MainThread]: Wrote artifact RunResultsArtifact to C:\Users\Yash Shukla\Documents\dbt_demo\capston_project_dbt_snowflake\target\run_results.json
+[0m22:27:12.923648 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- PropertyMovedToConfigDeprecation: 2 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m22:27:12.928023 [debug] [MainThread]: Command `dbt run-operation` succeeded at 22:27:12.927610 after 16.96 seconds
+[0m22:27:12.929148 [debug] [MainThread]: Connection 'macro_drop_schema' was left open.
+[0m22:27:12.930144 [debug] [MainThread]: On macro_drop_schema: Close
+[0m22:27:13.117089 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6E40064C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6E27BC5F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F6E27BC7D0>]}
+[0m22:27:13.118609 [debug] [MainThread]: Flushing usage events
+[0m22:27:15.458688 [debug] [MainThread]: An error was encountered while trying to flush usage events
