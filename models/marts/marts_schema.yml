@@ -88,14 +88,30 @@ models:
       - name: airport_code_id
         data_type: varchar
         description: ""
+        tests:
+          - relationships:
+              arguments:
+                to: ref('dimairports')
+                field: 'id'
+
 
       - name: city_id
         data_type: varchar
         description: ""
+        tests:
+          - relationships:
+              arguments:
+                to: ref('dimcity')
+                field: 'id'
 
       - name: country_id
         data_type: varchar
         description: ""
+        tests:
+          - relationships:
+              arguments:
+                to: ref('dimcountry')
+                field: 'id'
 
       - name: longitude
         data_type: number
