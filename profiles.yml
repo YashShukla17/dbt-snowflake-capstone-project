@@ -1,5 +1,5 @@
 snowflake_dbt_json:
-  target: dev
+  target: raw # dev
   outputs:
     dev:
       type: snowflake
