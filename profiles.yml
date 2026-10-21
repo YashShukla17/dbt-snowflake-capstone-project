@@ -1,7 +1,7 @@
 snowflake_dbt_json:
   target: raw # dev
   outputs:
-    dev:
+    raw:
       type: snowflake
       account: 'PIRRXSV-VE11580'
       user: "{{ env_var('DBT_USER') }}"
