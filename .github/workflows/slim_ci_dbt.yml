@@ -1,0 +1,59 @@
+name: Slim CI for TOP 30 Busiest airports project
+
+on:
+  pull_request: 
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  dbt_slim_ci:
+    name: run dbt slim_ci
+    runs-on: ubuntu-22.04
+
+    env:
+      DBT_PROFILES_DIR: ./
+      DBT_USER: ${{ secrets.DBT_USER }}
+      DBT_PASSWORD: ${{ secrets.DBT_PASSWORD }}
+      DBT_SCHEMA: dbt_pr_${{ github.event.pull_request.number }}
+
+    steps:
+      - name: checkout pr
+        uses: actions/checkout@v4
+
+      - name: install python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: install dbt snowflake adaptor
+        run: pip install dbt-core dbt-snowflake
+
+      - name: downlaod production manifest.json file
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          workflow: production_run.yml
+          name: prod-manifest
+          path: ./prod-manifest
+          search_artifacts: true
+          if_no_artifact_found: warn
+
+      - name: INSTALL dbt deps
+        run: dbt deps
+
+      - name: create smill_ci commands to run the build and tests
+        run: |
+          if [ -f ./prod-manifest/manifest.json ]; then
+            echo "running slim ci"
+            dbt build --select state:modified+ --defer --state ./prod-manifest
+          else
+            echo "No production manifest.json found running the full build"
+            dbt build
+          fi
+
+      - name: clean up pr branch after complition of workflow
+        if: always()
+        run: dbt run-operation drop_pr_schema --args '{schema_name: ${{ env.DBT_SCHEMA }}}'
