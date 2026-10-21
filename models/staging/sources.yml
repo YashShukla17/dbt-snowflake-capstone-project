@@ -2,6 +2,8 @@ version: 2
 
 sources:
   - name: raw
+    database: dbt_capstone
+    schema: raw
     tables:
       - name: airports_raw_dataset
         description: this table stores data for top 30 busiest airports
