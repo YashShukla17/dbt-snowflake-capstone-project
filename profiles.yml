@@ -3,7 +3,7 @@ snowflake_dbt_json:
     outputs:
       dev:
         type: snowflake
-        account: PIRRXSV-VE11580.ap-southeast-1 # e.g., xy12345.us-east-1
+        account: "PIRRXSV-VE11580.ap-southeast-1" # e.g., xy12345.us-east-1
         
         # Authentication variables populated from GitHub Secrets
         user: "{{ env_var('DBT_USER') }}"
