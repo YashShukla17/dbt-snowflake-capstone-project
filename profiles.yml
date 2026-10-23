@@ -1,12 +1,16 @@
 snowflake_dbt_json:
-  target: dev # dev
-  outputs:
-    dev:
-      type: snowflake
-      account: 'PIRRXSV-VE11580'
-      user: "{{ env_var('DBT_USER') }}"
-      password: "{{ env_var('DBT_PASSWORD') }}"
-      role: 'ACCOUNTADMIN' # Or whatever role you use
-      database: 'dbt_captsone'
-      warehouse: 'COMPUTE_WH'
-      schema: "{{ env_var('DBT_SCHEMA') }}"
+  target: dev
+    outputs:
+      dev:
+        type: snowflake
+        account: PIRRXSV-VE11580.ap-southeast-1 # e.g., xy12345.us-east-1
+        
+        # Authentication variables populated from GitHub Secrets
+        user: "{{ env_var('DBT_USER') }}"
+        password: "{{ env_var('DBT_PASSWORD') }}"
+        
+        # Hardcoded or parameterized warehouse variables
+        role: ACCOUNTADMIN
+        warehouse: COMPUTE_WH
+        database: dbt_captsone
+        schema: "{{ env_var('DBT_SCHEMA') }}"
