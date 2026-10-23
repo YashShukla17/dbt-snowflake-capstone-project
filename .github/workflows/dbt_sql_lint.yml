@@ -9,5 +9,32 @@ on:
         description: require pr code (1 to ..)
         required: True
         default: 999
-        
+
+jobs:
+  build_and_run:
+    - name: build_and_test
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+     - name: setup_python
+       uses: actions/setup-python@v5
+       with:
+         python_version: 3.11
+
+    - name: install deps
+      run: |  
+          pip -m install python --upgrade pip
+          pip install sqlfluff sqlfluff-templater--dbt dbt-snowflake
+
+    - name: install deps
+      run: dbt deps
+
+    - name: lint_dbt_models
+      run: sqlfluff lint models/
+
+    
     
