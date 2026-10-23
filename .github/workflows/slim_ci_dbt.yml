@@ -24,7 +24,7 @@ jobs:
       DBT_PROFILES_DIR: ./
       DBT_USER: ${{ secrets.DBT_USER }}
       DBT_PASSWORD: ${{ secrets.DBT_PASSWORD }}
-      DBT_SCHEMA: dbt_pr_${{ github.event.pull_request.number }}
+      DBT_SCHEMA: raw # dbt_pr_${{ github.event.pull_request.number }}
 
     steps:
       - name: checkout pr
