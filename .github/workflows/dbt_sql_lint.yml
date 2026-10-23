@@ -1,0 +1,13 @@
+name: run_sql_lint_on_dbt_code
+
+on:
+  pull_request: 
+    - main
+  workflow_dispatch:
+    inputs:
+      pr_numbers:
+        description: require pr code (1 to ..)
+        required: True
+        default: 999
+        
+    
